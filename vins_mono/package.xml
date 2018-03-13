@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>vins_mono</name>
+  <version>0.0.0</version>
+  <description>Meta-package for the vins mono.</description>
+  <maintainer email="qintonguav@gmail.com">qintong</maintainer>
+
+  <license>TODO</license>
+  <buildtool_depend>catkin</buildtool_depend>
+  <exec_depend>vins_estimator</exec_depend>
+  <exec_depend>pose_graph</exec_depend>
+  <exec_depend>feature_tracker</exec_depend>
+  <export>
+    <metapackage />
+  </export>
+</package>

@@ -156,8 +156,9 @@ void imu_callback(const sensor_msgs::ImuConstPtr &imu_msg)
         predict(imu_msg);
         std_msgs::Header header = imu_msg->header;
         header.frame_id = "world";
+        Eigen::Vector3d imu_G(imu_msg->angular_velocity.x, imu_msg->angular_velocity.y, imu_msg->angular_velocity.z);
         if (estimator.solver_flag == Estimator::SolverFlag::NON_LINEAR)
-            pubLatestOdometry(tmp_P, tmp_Q, tmp_V, header);
+            pubLatestOdometry(tmp_P, tmp_Q, tmp_V, imu_G, header);
     }
 }
 
