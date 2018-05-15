@@ -9,3 +9,6 @@ iphone.launch
 iphone/
 A3_rs/
 A3_rs.launch
+config/euroc/vins_result
+config/tx2/pose_graph
+config/tx2/vins_result
